@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Greeting</title>
+    <script>
+        function getRandomGreeting() {
+            const greetings = ["Hello!", "Hi there!", "Good day!", "Howdy!", "Hey!"];
+            const randomIndex = Math.floor(Math.random() * greetings.length);
+            document.getElementById("greeting").textContent = greetings[randomIndex];
+        }
+    </script>
+</head>
+<body>
+    <h1>Random Greeting Web Page</h1>
+    <p id="greeting">Click the button to see a random greeting!</p>
+    <button onclick="getRandomGreeting()">Get Greeting</button>
+</body>
+</html>
