@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ships at the starport</title>
+    <script>
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function getRandomGreeting() {
+            const greetings = ["Hello!", "Hi there!", "Good day!", "Howdy!", "Hey!"];
+            const randomIndex = Math.floor(Math.random() * greetings.length);
+            document.getElementById("greeting").textContent = greetings[randomIndex];
+        }
+        function getClassA() {
+            const starshipsA = ["Scout", "Yacht", "Yacht", "Free trader", "Free trader", "R class subsidised merchant", "R class subsidised merchant", "R class subsidised merchant", "M class subsidised liner", "M class subsidised liner", "M class subsidised liner"];
+            const randomIndex = Math.floor(Math.random() * starshipsA.length);
+        let n = getRndInteger(2, 12)
+        for (let i = 0; i < n; i++) {
+             console.log("This is iteration number " + (i + 1));
+             }
+        document.getElementById("classA").textContent = starshipsA[randomIndex];
+        }
+
+    </script>
+</head>
+<body>
+    <h1>These are the starships looking for cargo in the starport this week</h1>
+    <p>Consider if there is an up and a down port at the system, or both</p>
+    <p id="greeting">Click the button to see a random greeting!</p>
+    <button onclick="getRandomGreeting()">Get Greeting</button>
+    <p id="classA">Click here if the starport is class A</p>
+    <button onclick="getClassA()">Class A starport</button>
+    
+   <h2>ship details</h2>
+   <p><a href="https://wiki.travellerrpg.com/Type_M_class_Subsidized_Liner">Subsidised Merchant Type M</a> 600t - note <em>not streamlined</em> so has a launch which will be landed if there is only a downport</p>
+</body>
+</html>
