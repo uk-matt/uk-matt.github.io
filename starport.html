@@ -13,12 +13,14 @@
         }
         function getClassA() {
             const starshipsA = ["Scout", "Yacht", "Yacht", "Free trader", "Free trader", "R class subsidised merchant", "R class subsidised merchant", "R class subsidised merchant", "M class subsidised liner", "M class subsidised liner", "M class subsidised liner"];
-            const randomIndex = Math.floor(Math.random() * starshipsA.length);
+            
         let n = getRndInteger(2, 12)
         for (let i = 0; i < n; i++) {
              console.log("This is iteration number " + (i + 1));
+             const randomIndex = Math.floor(Math.random() * starshipsA.length);
+             document.getElementById("classA").textContent = starshipsA[randomIndex];
              }
-        document.getElementById("classA").textContent = starshipsA[randomIndex];
+        
         }
 
     </script>
@@ -32,6 +34,6 @@
     <button onclick="getClassA()">Class A starport</button>
     
    <h2>ship details</h2>
-   <p><a href="https://wiki.travellerrpg.com/Type_M_class_Subsidized_Liner">Subsidised Merchant Type M</a> 600t - note <em>not streamlined</em> so has a launch which will be landed if there is only a downport</p>
+   <p><a href="https://wiki.travellerrpg.com/Type_M_class_Subsidized_Liner">Subsidised Merchant Type M</a> 600t - note <em>not streamlined</em> so has a <a href="https://wiki.travellerrpg.com/Launch">launch</a> 20t, which will be landed if there is only a downport</p>
 </body>
 </html>

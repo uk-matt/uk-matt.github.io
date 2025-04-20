@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ships at the class A starport</title>
+    <script>
+        function getRandomGreetings() {
+            const greetings = ["Scout", "Yacht", "Yacht", "Free trader", "Free trader", "R class subsidised merchant", "R class subsidised merchant", "R class subsidised merchant", "M class subsidised liner", "M class subsidised liner", "Special, 1-2 = lab ship 3-4 = safari ship 5-6 = prospector"];
+            const randomGreetings = [];
+
+            while (randomGreetings.length < 5) {
+                const randomIndex = Math.floor(Math.random() * greetings.length);
+                const greeting = greetings[randomIndex];
+
+                if (!randomGreetings.includes(greeting)) { 
+                    randomGreetings.push(greeting);
+                }
+            }
+
+            document.getElementById("greetings").innerHTML = randomGreetings.map(greet => `<li>${greet}</li>`).join('');
+        }
+    </script>
+</head>
+<body>
+    <h1>Random starships looking for cargo at the class A starport this week</h1>
+    <p>Consider if there is an up and a down port at the system, or both</p>
+    <p>Click the button to see three random greetings!</p>
+    <ul id="greetings"></ul>
+    <button onclick="getRandomGreetings()">Get Greetings</button>
+    
+   <h2>ship details</h2>
+   <p><a href="https://wiki.travellerrpg.com/Type_M_class_Subsidized_Liner">Subsidised Merchant Type M</a> 600t - note <em>not streamlined</em> so has a <a href="https://wiki.travellerrpg.com/Launch">launch</a> 20t, which will be landed if there is only a downport</p>
+</body>
+</html>
