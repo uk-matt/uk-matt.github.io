@@ -2,6 +2,6 @@
 trav rpg stuff
 
 my first JS
-[startpage](https://github.com/uk-matt/uk-matt.github.io/blob/main/start.html)
+[startpage](https://uk-matt.github.io/start.html)
 version one
 [starport stuff](https://uk-matt.github.io/starport.html)
