@@ -1,8 +1,11 @@
 <head>
 <b:skin>
 <style>
+
 body {
-  background-color: black;
+  background: linear-gradient(to right, black, steelBlue);
+  font-family: Arial, sans-serif;
+  color: white;
 }
 table, th, td {
   border: 1px solid black;
@@ -44,7 +47,7 @@ tr:nth-child(odd) {
 <tbody>
 <tr>
 <td>2</td>
-<td>Weather</td>
+<td><a href="#weather">Weather</a></td>
 <td>Weather</td>
 <td>Weather</td>
 <td>Weather</td>
@@ -61,7 +64,7 @@ tr:nth-child(odd) {
 <td>Port error</td>
 <td>Nothing</td>
 <td>Nothing</td>
-<td>Malfunction</td>
+<td><a href="#malfunction">Malfunction</a></td>
 </tr>
 <tr>
 <td>5</td>
@@ -123,8 +126,162 @@ tr:nth-child(odd) {
 </table>
 </div>
 
+<h2 id="collision" style="text-align: left;">Collision</h2>
+<p>Another ship will collide with the PCs ship in 1D6 rounds unless the crew can evade it. Note that no further events are rolled for on this landing / take-off</p>
+<p>Each round the crew can throw 5+ to detect the impending collision. Some DMs may apply, depending on the cause of the collision. Throw 1D6 and refer to the table below</p>
 
-<h2 style="text-align: left;">Weather</h2><p>Throw 1D6 and refer to additional table below. Note that no further events are rolled for on this landing / take-off</p>
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Who is at fault?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - 2</td>
+<td>Traffic control error - all rolls to detect impending collision have a -2 DM. But at least the SpA will pay for repairs, though only after an investigation taking 4D6 weeks</td>
+</tr>
+<tr>
+<td>4 - 5</td>
+<td>Pilot error - all rolls to detect impending collision have a -1 DM. If not established through the collision process, each pilot makes a skill check and the one with the lowest result is at fault - but there will be an investigation taking 4D6 weeks for the SpA to determine this. The vessel of the pilot determined to be at fault will receive a fine of 1D6 x Cr1000 even if no collision results - and will be liable for repair costs if one does occur</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Roll again, and if 6 rolled a second time the other ship is making a deliberate collision attempt. Perhaps suicidal malice or maybe a lapse of judgement because of delusions, drunkeness or other impairment. The true reason may be determined through an SpA investigation taking 4D6 weeks, or further developments in the campaign - or may never be determined</td>
+</tr>
+</tbody>
+</table>
+
+<p>When the crew does notice the danger the pilot must throw Pilot/DEX 8+ to avoid the other vessel, with the model number of the ship's computer as a DM. Look at the table below to interpret the effect of the throw.</p>
+
+<table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>Collision damage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-6 or worse</td>
+<td>Substantial damage to both ships. Damage equivalent to a "rough landing" and each ship will need the equivalent of a major annual overhaul to stay spaceworthy</td>
+</tr>
+<tr>
+<td>-3 to -5</td>
+<td>The PCs ship takes substantial damage (equivalent to a "rough landing") and will need the equivalent of a major annual overhaul to stay spaceworthy. The other ship is unscathed</td>
+</tr>
+<tr>
+<td>0 to -2</td>
+<td>The other ship takes substantial damage (equivalent to a "rough landing") and will need the equivalent of a major annual overhaul to stay spaceworthy. The PCs ship is unscathed</td>
+</tr>
+<tr>
+<td>1 or above</td>
+<td>Both ships are undamaged - what a relief!</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="malfunction" style="text-align: left;">Ship malfunction</h2>
+<p>Throw 2D6 and refer to ship malfunction table below. Note that no further events are rolled for on this landing / take-off</p>
+
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Ship malfunction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Manoeuver drive failure</td>
+</tr>
+<tr>
+<td>3 - 5</td>
+<td>Fuel intake failure</td>
+</tr>
+<tr>
+<td>6 - 8</td>
+<td>Communications failure</td>
+</tr>
+<tr>
+<td>9 - 10</td>
+<td>Computer failure</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Landing gear failure</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Pilot error</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="malfunction" style="text-align: left;">Ship malfunction</h2>
+<p>Throw 2D6 and refer to ship malfunction table below. Note that no further events are rolled for on this landing / take-off</p>
+
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Ship malfunction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Manoeuver drive failure</td>
+</tr>
+<tr>
+<td>3 - 5</td>
+<td>Fuel intake failure</td>
+</tr>
+<tr>
+<td>6 - 8</td>
+<td>Communications failure</td>
+</tr>
+<tr>
+<td>9 - 11</td>
+<td>Landing gear failure</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Good landing - no ship damage or significant injury to crew</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="porterror" style="text-align: left;">Port error</h2>
+<p>Throw 1D6 and refer to additional table below. Note that no further events are rolled for on this landing / take-off</p>
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Port error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - 3</td>
+<td>False readings - ground control give readings that conflicts with those from the ship's sensors. This error will continue each round unless a throw of 9+ is made for the SpA personnel. PCs must choose whether to trust their own sensors or use data from the starport. If they use their own readings then limuited effect - treat as Communications Failure. If they follow the instructions from ground control then roll on the Pilot error table using the pilot's Pilot skill as a negative DM</td>
+</tr>
+<tr>
+<td>4 - 5</td>
+<td>Traffic misdirection - all subsequent Pilot skill throws during this landing have a DM of -2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Abort - landing cannot safely take place because of a groundside emergency. The ship must immediately switch to making an ascent, with a new event roll. A new landing attempt may be made in 1D6 hours</td>
+</tr>
+</tbody>
+</table>
+
+
+<h2 id="weather" style="text-align: left;">Weather</h2>
+<p>Throw 1D6 and refer to additional table below. Note that no further events are rolled for on this landing / take-off</p>
 <div class="table-container">
 <table>
 <thead>
@@ -140,13 +297,17 @@ tr:nth-child(odd) {
 </tr>
 <tr>
 <td>4 - 5</td>
-<td>High wind - Throw 1D6. On a 1 the ship topples over on landing (see "rough landing" on Crash table below). On 2-6</td>
+<td>High wind - Throw 1D6. On a 1 the ship topples over on landing (see "rough landing" on Crash table below). On 2-6 roll on the Pilot Error Table with Pilot skill as a negative DM</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Electrical storm</td>
+<td>Electrical storm - Throw 1D6. On 1 - 2 roll for a ship malfunction. On 3 - 4 there is a fuel leak and the ship will lose 2D6-2 x 10% of its available fuel over the next 2D6 hours. On 5 - 6 there is no significant effect on the ship</td>
 </tr>
 </tbody>
 </table>
+Communications failure
+Crash table
+Pilot error table
+Ship malfunction
 </div>
 </body>
