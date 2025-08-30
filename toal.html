@@ -30,9 +30,16 @@ tr:nth-child(odd) {
 <body>
 <h2 style="text-align: left;">Landing permission&nbsp;</h2>
 <p>On arrival at a system's mainworld the ship must contact the starport and request landing permission. This will usually be granted by the Starport Authority (SpA) and a timeslot given to land in 30-180 minutes. This delay may be needed for other ships to land, maintenance or repair work to be done, SpA staff shifts to change-over, or many other reasons.</p>
-<h2 style="text-align: left;">Descent</h2><p>For each point of "size" that the mainworld has, one turn of 1000 seconds (approx 17 minutes) must be spent descending. For each of these turns the pilot must make a skill check of 9+ to avoid an "event"
-</p>
-<h2 style="text-align: left;">Events</h2><p>Throw 2D6 and refer to the table below</p>
+
+<p>Each point of "size" that the world from which the PCs are taking off or on which they are landing has, is represented by one range band. E.g. if the planet has a Size of 5 there are five range bands to be traversed during a take-off or landing.</p>
+
+<h2 style="text-align: left;">Descent</h2>
+<p>For each range band, one turn of 1000 seconds (approx 17 minutes) must be spent descending. For each of these turns the pilot must make a skill check of 9+ to avoid an "event"</p>
+
+<h2 style="text-align: left;">Ascent</h2>
+<p>Consider the acceleration of the ship. On the first turn of 1000 seconds (approx 17 minutes) spent ascending the ship will have climbed through as many range bands as it has G of manoeuvre. On the second turn the ship will have accelerated and will travel enough to escape the atmosphere / gravity of a size 1 planet. On the second term the ship will have accelerated and it will travel through . For each "G" of acceleration point of "size" that the mainworld has,  must be spent descending. For each of these turns the pilot must make a skill check of 9+ to avoid an "event"</p>^^^ THIS probably DOESNT MAKE SENSE ^^^
+
+<h2 style="text-align: left;">Events</h2><p>Throw 2D6 and refer to the table below. Note that once an event is determined, no further events are rolled for on this landing / take-off</p>
 <div class="table-container">
 <table>
 <thead>
@@ -48,20 +55,20 @@ tr:nth-child(odd) {
 <tr>
 <td>2</td>
 <td><a href="#weather">Weather</a></td>
-<td>Weather</td>
-<td>Weather</td>
-<td>Weather</td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
 </tr>
 <tr>
 <td>3</td>
-<td>Weather</td>
-<td>Weather</td>
-<td>Collision</td>
-<td>Weather</td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#collision">Collision</a></td>
+<td><a href="#weather">Weather</a></td>
 </tr>
 <tr>
 <td>4</td>
-<td>Port error</td>
+<td><a href="#porterror">Port error</a></td>
 <td>Nothing</td>
 <td>Nothing</td>
 <td><a href="#malfunction">Malfunction</a></td>
@@ -69,15 +76,15 @@ tr:nth-child(odd) {
 <tr>
 <td>5</td>
 <td>Nothing</td>
-<td>Collision</td>
-<td>Weather</td>
-<td>Malfunction</td>
+<td><a href="#collision">Collision</a></td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#malfunction">Malfunction</a></td>
 </tr>
 <tr>
 <td>6</td>
-<td>Collision</td>
-<td>Port error</td>
-<td>Port error</td>
+<td><a href="#collision">Collision</a></td>
+<td><a href="#porterror">Port error</a></td>
+<td><a href="#porterror">Port error</a></td>
 <td>Nothing</td>
 </tr>
 <tr>
@@ -89,9 +96,9 @@ tr:nth-child(odd) {
 </tr>
 <tr>
 <td>8</td>
-<td>Malfunction</td>
-<td>Malfunction</td>
-<td>Malfunction</td>
+<td><a href="#malfunction">Malfunction</a></td>
+<td><a href="#malfunction">Malfunction</a></td>
+<td><a href="#malfunction">Malfunction</a></td>
 <td>Nothing</td>
 </tr>
 <tr>
@@ -103,38 +110,38 @@ tr:nth-child(odd) {
 </tr>
 <tr>
 <td>10</td>
-<td>Port error</td>
-<td>Port error</td>
-<td>Port error</td>
+<td><a href="#porterror">Port error</a></td>
+<td><a href="#porterror">Port error</a></td>
+<td><a href="#porterror">Port error</a></td>
 <td>Nothing</td>
 </tr>
 <tr>
 <td>11</td>
-<td>Weather</td>
-<td>Weather</td>
-<td>Port error</td>
-<td>Weather</td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#porterror">Port error</a></td>
+<td><a href="#weather">Weather</a></td>
 </tr>
 <tr>
 <td>12</td>
-<td>Weather</td>
-<td>Weather</td>
-<td>Weather</td>
-<td>Weather</td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
+<td><a href="#weather">Weather</a></td>
 </tr>
 </tbody>
 </table>
 </div>
 
 <h2 id="collision" style="text-align: left;">Collision</h2>
-<p>Another ship will collide with the PCs ship in 1D6 rounds unless the crew can evade it. Note that no further events are rolled for on this landing / take-off</p>
-<p>Each round the crew can throw 5+ to detect the impending collision. Some DMs may apply, depending on the cause of the collision. Throw 1D6 and refer to the table below</p>
+<p>Another ship will collide with the PCs ship in 1D6 rounds unless the crew can evade it</p>
+<p>Each round the crew can throw 5+ to detect the impending collision. Some DMs may apply, depending on the cause of the collision - which will be determined by throwing 1D6 and referring to the table below</p>
 
 <table>
 <thead>
 <tr>
 <th>Throw</th>
-<th>Who is at fault?</th>
+<th>What is the cause of the potential collision?</th>
 </tr>
 </thead>
 <tbody>
@@ -153,7 +160,7 @@ tr:nth-child(odd) {
 </tbody>
 </table>
 
-<p>When the crew does notice the danger the pilot must throw Pilot/DEX 8+ to avoid the other vessel, with the model number of the ship's computer as a DM. Look at the table below to interpret the effect of the throw.</p>
+<p>When the crew does notice the danger, the pilot must throw Pilot/DEX 8+ to avoid the other vessel, with the model number of the ship's computer as a DM. Look at the table below to interpret the effect of the throw.</p>
 
 <table>
 <thead>
@@ -165,15 +172,15 @@ tr:nth-child(odd) {
 <tbody>
 <tr>
 <td>-6 or worse</td>
-<td>Substantial damage to both ships. Damage equivalent to a "rough landing" and each ship will need the equivalent of a major annual overhaul to stay spaceworthy</td>
+<td>Substantial damage to both ships. Damage equivalent to a "rough landing" (ship seriously damaged - roll once on Cepheus "Internal Hits Table" - and 2D6 damage to each crew member) and each ship will need the equivalent of a major annual overhaul to stay spaceworthy</td>
 </tr>
 <tr>
 <td>-3 to -5</td>
-<td>The PCs ship takes substantial damage (equivalent to a "rough landing") and will need the equivalent of a major annual overhaul to stay spaceworthy. The other ship is unscathed</td>
+<td>The PCs ship takes substantial damage equivalent to a "rough landing" (ship seriously damaged - roll once on Cepheus "Internal Hits Table" - and 2D6 damage to each crew member) and will need the equivalent of a major annual overhaul to stay spaceworthy. The other ship is lightly damaged (roll once on Cepheus "Surface Hits Table") but their crew members are unharmed</td>
 </tr>
 <tr>
 <td>0 to -2</td>
-<td>The other ship takes substantial damage (equivalent to a "rough landing") and will need the equivalent of a major annual overhaul to stay spaceworthy. The PCs ship is unscathed</td>
+<td>The other ship takes substantial damage equivalent to a "rough landing" (ship seriously damaged - roll once on Cepheus "Internal Hits Table" - and 2D6 damage to each crew member) and will need the equivalent of a major annual overhaul to stay spaceworthy. The PCs ship is lightly damaged (roll once on Cepheus "Surface Hits Table") but crew members are unharmed</td>
 </tr>
 <tr>
 <td>1 or above</td>
@@ -182,9 +189,10 @@ tr:nth-child(odd) {
 </tbody>
 </table>
 
+<p>If the PCs are liable for repairs to the other ship but cannot afford them, the SpA will attempt to confiscate their ship, arrange for it to be sold off (referee should consider the approximate value of the ship and then the skill of the broker that the SpA will use to determine how much of the value can be realised in a sale - noting that the SpA will probably price low for a quicker sale) and then the PCs will get the remainder after repairs, broker fees and admin costs have been paid</p>
 
 <h2 id="malfunction" style="text-align: left;">Ship malfunction</h2>
-<p>Throw 2D6 and refer to ship malfunction table below. Note that no further events are rolled for on this landing / take-off</p>
+<p>Throw 2D6 and refer to ship malfunction table below</p>
 
 <table>
 <thead>
@@ -196,34 +204,131 @@ tr:nth-child(odd) {
 <tbody>
 <tr>
 <td>2</td>
-<td>Manoeuver drive failure</td>
+<td><a href="#lostcontrol">Manoeuvre drive failure</a></td>
 </tr>
 <tr>
 <td>3 - 5</td>
-<td>Fuel intake failure</td>
+<td><a href="#nofuel">Fuel intake failure</a></td>
 </tr>
 <tr>
 <td>6 - 8</td>
-<td>Communications failure</td>
+<td><a href="#nocomms">Communications failure</a></td>
 </tr>
 <tr>
 <td>9 - 10</td>
-<td>Computer failure</td>
+<td><a href="#badcomp">Computer failure</a></td>
 </tr>
 <tr>
 <td>11</td>
-<td>Landing gear failure</td>
+<td><a href="#landgear">Landing gear failure</a></td>
 </tr>
 <tr>
 <td>12</td>
-<td>Pilot error</td>
+<td><a href="#piloterror">Pilot error</a></td>
 </tr>
 </tbody>
 </table>
 
+<h2 id="lostcontrol" style="text-align: left;">Manoeuvre drive failure</h2>
+<p>When the M-drive cuts out the pilot has no control over the ship's movements. The referee should note (or randomly determine) the current 'band' of descent amd follow the process below</p>
+<ol>
+<li>Determine the gravity of the world (approximately the Size characteristic divided by 8) which determines how fast the ship will accelerate as it comes down</li>
+<li>The ship will crash unless the engineer can restore the M-drive or the pilot can glide the ship to the ground
+<ul>
+<li>The engineer can restore the M-drive by throwing Engineering/INT 8+. This temporary repair will last 1D6 hours</li>
+<li>The pilot can gain control of a ship with a standard hull by throwing Pilot/INT 10+. If the hull is streamlined there is a +3 DM. If the hull is distributed there is a -6 DM. If control is gained the pilot must throw Pilot/INT 6+ each round to maintain it - same DMs. If control is lost it must be regained as above. Downward acceleration can be halved if the pilot chooses to do so while gliding the ship, and this will give the engineer more time to fix the M-drive</li>
+<li>Assuming the crew does not have one person filling both these roles, both the pilot and the engineer can check each round</li>
+</ul></li>
+<li>When the final descent band is reached, the pilot (if not in control) gets a final chance to pull off a controlled landing. If the M-drive is not working and the pilot is not in control then roll on the <a href="#landing">Emergency Landing</a> table below.</li>
+</ol>
+
+<h2 id="nofuel" style="text-align: left;">Fuel intake failure</h2>
+<p>The intake of fuel to the powerplant has been interrupted, which will cause the M-drive to cut out. Treat as <a href="#lostcontrol">manoeuvre drive failure</a> except the fix is easier and the engineer gets a +2 DM</p>
+
+<h2 id="nocomms" style="text-align: left;">Communications failure</h2>
+<p>Contact with the starport is lost because of an electronic failure on the ship. A crew member can attempt to fix this once each round by throwing Electronics/INT 8+. The failure may fix itself on a throw of 10+ each round. While the comms are down throw 1D6 and refer to the following table</p>
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Effect of comms failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - 3</td>
+<td>No effect</td>
+</tr>
+<tr>
+<td>4 - 5</td>
+<td>All subsequent Pilot skill throws during this landing have a DM of -2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Treat as <a href="#collision">collision alert</a> except the starport will immediately alert the PCs ship if / when comms are restored</td>
+</tr>
+</tbody>
+</table>  
+
+<h2 id="badcomp" style="text-align: left;">Computer failure</h2>
+<p>The readings (e.g., position, altitude, velocity, estimated time of touchdown, etc) given by ground control conflict with those from the ship's sensors. PCs must choose whether to trust their own sensors or use data from the starport.</p>
+<p>If they choose to use their own instruments then roll on the <a href="#piloterror">pilot error table</a> with Pilot skill as a DM and also the INT DM for the pilot. Note that if the ship is taking off (instead of landing) then the pilot error results that indicate a rough landing or a crash landing should be treated as "no effect"</p>
+<p>If the players elect to land their ship using information from the starport ground controller, first determine the intelligence characteristic of that person (e.g., INT = 6 + 1D6). Then, each round, throw 2D6 and record if the result is successful i.e., less than or equal to the ground controller's INT. When the ship reaches the ground a roll must be made on the <a href="#landing">Emergency landing table</a>. Each successful round with the starport ground control gives an additional +1 DM on the roll but each failure gives a -1 DM.</p>
+
+<h2 id="landgear" style="text-align: left;">Landing gear failure</h2>
+<p>There has been an incorrect deployment of the ship's landing gear. If the ship is landing, use the table below to determine the nature of this failure. If the ship is taking off then the landing gear has failed to retract which can be fixed when in orbit with a successful throw of Engineering/STR 8+ though this will require the engineer to be outside the ship (in a vacc suit)</p>
+
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Landing gear failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - 2</td>
+<td>Not deployed - this will be noticed immediately by the pilot who can choose to return to orbit or do a 'rough landing' as per the <a href="#landing">Emergency landing table</a></td>
+</tr>
+<tr>
+<td>3 - 4</td>
+<td>Improperly deployed - the landing gear seems okay but is not. The pilot may detect this with a throw of Pilot/INT 8+ (check each round). If not detected before touchdown the ship will <a href="#topple">topple</a> after landing, like in a high wind</td>
+</tr>
+<tr>
+<td>5 - 6</td>
+<td>Landing gear weakened - 1D6 hours after landing, groaning / creaking / cracking noises will be heard and the landing gear will fail causing the ship to <a href="#topple">topple</a></td>
+</tr>
+</tbody>
+</table> 
+
+<h2 id="piloterror" style="text-align: left;">Pilot error</h2>
+<p>The pilot has made a mistake with some control, or misapplied a correction to the ship's trajectory. This does not affect a take-off, but if the ship is landing throw Pilot/INT 8+ each round to detect the error. If the error has not been detected by touchdown roll 2D6 and refer to the table below</p>
+
+<table>
+<thead>
+<tr>
+<th>Throw</th>
+<th>Pilot error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 - 5</td>
+<td>Minor deviation - no effect</td>
+</tr>
+<tr>
+<td>6 - 8</td>
+<td>Significant deviation - throw Pilot/INT 8+ or the <a href="#landing">landing is rough</a></td>
+</tr>
+<tr>
+<td>9 - 11</td>
+<td>Collision alert - see pilot error result on <a href="#collision">collision table</a></td>
+</tr>
+</tbody>
+</table> 
 
 <h2 id="landing" style="text-align: left;">Emergency landing</h2>
-<p>Throw 2D6 and refer to emergency landing table below</p>
+<p>Throw 2D6 and refer to emergency landing table below. Apply Pilot skill as a DM and the referee should determine the terrain of the crash / landing site and apply another DM based on softness / hardness, etc</p>
 
 <table>
 <thead>
@@ -235,19 +340,19 @@ tr:nth-child(odd) {
 <tbody>
 <tr>
 <td>2</td>
-<td>Crash - ship very badly damaged and 4D6 damage to each crew member</td>
+<td>Crash - ship very badly damaged (roll once on Cepheus "Internal Hits Table" and once on the "Critical Hits Table") and 4D6 damage to each crew member</td>
 </tr>
 <tr>
 <td>3 - 5</td>
-<td>Crash landing - ship badly damaged and 3D6 damage to each crew member</td>
+<td>Crash landing - ship badly damaged (roll twice on Cepheus "Internal Hits Table") and 3D6 damage to each crew member</td>
 </tr>
 <tr>
 <td>6 - 8</td>
-<td>Rough landing - ship seriously damaged and 2D6 damage to each crew member</td>
+<td>Rough landing - ship seriously damaged (roll once on Cepheus "Internal Hits Table") and 2D6 damage to each crew member</td>
 </tr>
 <tr>
 <td>9 - 10</td>
-<td>Bumpy landing - ship may be damaged and 1D6 damage to each crew member</td>
+<td>Bumpy landing - ship may be damaged (roll once on Cepheus "Surface Hits Table") and 1D6 damage to each crew member</td>
 </tr>
 <tr>
 <td>11 - 12</td>
@@ -269,7 +374,7 @@ tr:nth-child(odd) {
 <tbody>
 <tr>
 <td>1 - 3</td>
-<td>False readings - ground control give readings that conflicts with those from the ship's sensors. This error will continue each round unless a throw of 9+ is made for the SpA personnel. PCs must choose whether to trust their own sensors or use data from the starport. If they use their own readings then limuited effect - treat as Communications Failure. If they follow the instructions from ground control then roll on the Pilot error table using the pilot's Pilot skill as a negative DM</td>
+<td>False readings - The readings (e.g., position, altitude, velocity, estimated time of touchdown, etc) given by ground control conflict with those from the ship's sensors. PCs must choose whether to trust their own sensors or use data from the starport. This error will continue each round unless a throw of 9+ is made for the SpA personnel. If the PCs use their own readings then treat as <a href="#nocomms">Communications Failure</a>. If they follow the instructions from ground control then roll on the Pilot error table using the pilot's Pilot skill as a negative DM</td>
 </tr>
 <tr>
 <td>4 - 5</td>
@@ -296,11 +401,11 @@ tr:nth-child(odd) {
 <tbody>
 <tr>
 <td>1 - 3</td>
-<td>Poor visibility - no effect on a take-off. If landing must throw Pilot/EDU 9+ to avoid a "rough landing" as per Crash table below when ship reaches the planet</td>
+<td>Poor visibility - no effect on a take-off. If landing must throw Pilot/EDU 9+ to avoid a "rough landing" (ship seriously damaged - roll once on Cepheus "Internal Hits Table" - and 2D6 damage to each crew member) when ship reaches the planet</td>
 </tr>
 <tr>
 <td>4 - 5</td>
-<td>High wind - Throw 1D6. On a 1 the ship topples over on landing (see "rough landing" on Crash table below). On 2-6 roll on the Pilot Error Table with Pilot skill as a negative DM</td>
+<td id="topple">High wind - Throw 1D6. On a 1 the ship topples over on landing (ship seriously damaged - roll once on Cepheus "Internal Hits Table" - and 2D6 damage to each crew member). On 2-6 roll on the Pilot Error Table with Pilot skill as a negative DM</td>
 </tr>
 <tr>
 <td>6</td>
@@ -308,9 +413,8 @@ tr:nth-child(odd) {
 </tr>
 </tbody>
 </table>
-Communications failure
-Crash table
+
 Pilot error table
-Ship malfunction
+
 </div>
 </body>
