@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Starport Ship Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: midnightblue;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      color: gold;
+    }
+    label {
+      margin-right: 15px;
+    }
+    button {
+      background-color: darkorange;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: navy;
+    }
+    th, td {
+      border: 1px solid white;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: steelblue;
+    }
+    .section {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Starport Ship Generator</h1>
+  <div>
+    <label><input type="radio" name="starport" value="A" checked> Class A</label>
+    <label><input type="radio" name="starport" value="B"> Class B</label>
+    <label><input type="radio" name="starport" value="C"> Class C</label>
+    <label><input type="radio" name="starport" value="D"> Class D</label>
+    <label><input type="radio" name="starport" value="E"> Class E</label>
+    <label><input type="radio" name="starport" value="X"> Class X</label>
+    <button onclick="generate()">Generate Ships</button>
+  </div>
+
+  <div id="output" class="section"></div>
+
+  <script>
+    const shipTable = {
+      A: ["Scout","Yacht","Yacht","Free trader","Free trader","Far trader","Far trader","R class subsidised trader","R class subsidised trader","M class subsidised trader","M class subsidised trader"],
+      B: ["Scout","Yacht","Yacht","Yacht","Free trader","Free trader","Free trader","Far trader","Far trader","R class subsidised trader","M class subsidised trader"],
+      C: ["Scout","Scout","Yacht","Yacht","Yacht","Free trader","Free trader","Far trader","Far trader","R class subsidised trader","M class subsidised trader"],
+      D: ["Scout","Scout","Yacht","Yacht","Free trader","Free trader","Free trader","Far trader","Far trader","R class subsidised trader","R class subsidised trader"],
+      E: ["Scout","Scout","Scout","Scout","Yacht","Yacht","Yacht","Yacht","Yacht","Free trader","Far trader"],
+      X: ["Scout","Scout","Scout","Scout","Scout","Scout","Yacht","Yacht","Yacht","Yacht","Free trader"]
+    };
+
+    const shipLinks = {
+      "Scout": "https://wiki.travellerrpg.com/Type_S_class_Scout/Courier",
+      "Yacht": "https://wiki.travellerrpg.com/Lady_of_Shallott_class_Yacht",
+      "Free trader": "https://wiki.travellerrpg.com/Beowulf_class_Free_Trader",
+      "Far trader": "https://wiki.travellerrpg.com/Empress_Marava_class_Far_Trader",
+      "R class subsidised trader": "https://wiki.travellerrpg.com/Type_R_class_Subsidized_Merchant",
+      "M class subsidised trader": ""
+    };
+
+    const cargoDefaults = {
+      "Scout": 3,
+      "Yacht": 11,
+      "Free trader": 80,
+      "Far trader": 70,
+      "R class subsidised trader": 200,
+      "M class subsidised trader": 1200
+    };
+
+    const cargoModifiers = {
+      "Scout": -2,
+      "Yacht": -9,
+      "Free trader": -4,
+      "Far trader": -4,
+      "R class subsidised trader": -8,
+      "M class subsidised trader": -8
+    };
+
+    const starportModifiers = {
+      A: 0,
+      B: -1,
+      C: -2,
+      D: -4,
+      E: -6,
+      X: -8
+    };
+
+    const passengerRules = {
+      A: [3,3,4,9],
+      B: [2,3,4,9],
+      C: [1,2,3,3],
+      D: [0,1,2,2],
+      E: [0,0.5,1,1],
+      X: [0,0,0,0]
+    };
+
+    const freightRules = {
+      A: 10,
+      B: 5,
+      C: 2,
+      D: 1,
+      E: 1,
+      X: 0
+    };
+
+    function rollDice(n=1, sides=6) {
+      let total = 0;
+      for (let i = 0; i < n; i++) {
+        total += Math.floor(Math.random() * sides) + 1;
+      }
+      return total;
+    }
+
+    function generate() {
+      const starport = document.querySelector('input[name="starport"]:checked').value;
+      const output = document.getElementById("output");
+      let ships = [];
+
+      // Step 1: Merchant ships with cargo
+      let numShips = rollDice(2) + starportModifiers[starport];
+      numShips = Math.max(0, numShips);
+      for (let i = 0; i < numShips; i++) {
+        let shipType = shipTable[starport][rollDice(2)-2];
+        let cargoRoll = rollDice(2) + cargoModifiers[shipType];
+        let cargoSpace = cargoRoll > 0 ? Math.floor((cargoRoll * 10 / 100) * cargoDefaults[shipType]) : 0;
+        ships.push({type: shipType, cargo: cargoSpace});
+      }
+
+      // Step 2: Merchant ships with no cargo
+      let busyShips = rollDice(2) + starportModifiers[starport];
+      busyShips = Math.max(0, busyShips);
+      for (let i = 0; i < busyShips; i++) {
+        let shipType = shipTable[starport][rollDice(2)-2];
+        ships.push({type: shipType, cargo: 0});
+      }
+
+      // Step 3: Other ships
+      let otherShips = Math.floor(rollDice(1) / 2);
+      for (let i = 0; i < otherShips; i++) {
+        let roll = rollDice(1);
+        if (starport === "A") roll += 2;
+        else if (starport === "B") roll += 1;
+        let type = ["Pirate","Salvager","Prospector","Safari ship","Research ship","Patrol ship","Passenger liner","Passenger liner"][Math.min(roll-1,7)];
+        ships.push({type: type, cargo: 0});
+      }
+
+      // Step 4: Passengers
+      let passengerTypes = ["High", "Mid", "Steerage", "Low"];
+      let passengers = passengerTypes.map((type, i) => {
+        let dice = passengerRules[starport][i];
+        return dice === 0 ? 0 : Math.floor(rollDice(Math.ceil(dice)));
+      });
+
+      // Step 5: Freight
+      let freightLots = starport === "X" ? 0 : 3;
+      let freight = [];
+      for (let i = 0; i < freightLots; i++) {
+        freight.push(rollDice(1) * freightRules[starport]);
+      }
+
+      // Step 6: Display
+      let html = `<h2>Ships at Starport ${starport}</h2><table><tr><th>Ship Type</th><th>Cargo Space (tons)</th></tr>`;
+      ships.forEach(ship => {
+        let link = shipLinks[ship.type];
+        let name = link ? `<a href="${link}" target="_blank">${ship.type}</a>` : ship.type;
+        html += `<tr><td>${name}</td><td>${ship.cargo}</td></tr>`;
+      });
+      html += `</table>`;
+
+      html += `<div class="section"><h2>Passengers</h2><ul>`;
+      passengerTypes.forEach((type, i) => {
+        html += `<li>${type}: ${passengers[i]}</li>`;
+      });
+      html += `</ul></div>`;
+
+      html += `<div class="section"><h2>Freight Lots</h2><ul>`;
+      freight.forEach((lot, i) => {
+        html += `<li>Lot ${i+1}: ${lot} tons</li>`;
+      });
+      html += `</ul></div>`;
+
+      output.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
