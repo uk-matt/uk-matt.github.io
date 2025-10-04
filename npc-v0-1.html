@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NPC Description Generator</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; max-width:900px; margin:40px auto; padding:20px; line-height:1.5; }
+    button { padding:10px 14px; border-radius:8px; border:1px solid #ccc; background:#f5f5f5; cursor:pointer; }
+    pre { background:#111; color:#dcdcdc; padding:16px; border-radius:8px; overflow:auto; }
+    .meta { color:#666; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>NPC Description — Generator (converted from PowerShell)</h1>
+  <p class="meta">Click <strong>Generate</strong> to create a randomized NPC description (JavaScript port of the uploaded PowerShell).</p>
+  <p>
+    <button id="gen">Generate NPC</button>
+    <button id="copy">Copy to clipboard</button>
+  </p>
+  <pre id="out" aria-live="polite">(press Generate)</pre>
+
+  <script>
+    // Arrays ported from the uploaded PowerShell (kept original strings where present)
+    const heights = ["short", "below average height", "average height", "average height", "slightly tall", "tall"];
+    const builds = ["skinny", "slim", "average build", "plump", "big boned", "very muscular"];
+    const looks = ["ugly", "plain", "average looking", "rough looking", "slightly attractive", "good looking"];
+    const clothing = ["and wearing clean clothes", "and dressed smartly", "and wearing a uniform", "and wearing business clothes", "and dressed exotically", "but scruffily dressed"];
+    const accessories = ["unusual footwear", "a noticeable hat", "a distinctive jacket", "a noticeable shirt", "unusual trousers", "unusual jewellery or facial hair"];
+    const cyber = ["1-3 cyber fingers", "1-2 cyber hands", "1-2 cyber feet", "1-2 cyber legs", "1-2 cyber eyes", "a non-visible cyber enhancement"];
+    const personality = ["introverted", "somewhat shy", "thoughtful", "friendly", "loud", "direct", "pragmatic", "businesslike", "nervous", "uncomfortable", "reserved"];
+    const mannerisms = ["smells of air-freshener", "avoids eye contact", "is enthusiastic about a local shared cause", "seems distracted", "overuses a certain word", "speaks slowly", "complains about a certain faction", "is forgetful"];
+    const roles = ["are a collector", "are a history buff", "are an influencer", "are a musician", "are a sports fan", "are an amateur detective"];
+    const likes = ["food / drink", "gambling", "the outdoors", "wealth", "weapons", "art", "books", "music", "mechanics", "conversation", "puzzles", "animals"];
+    const beliefs = ["atheist", "Cthulhu cultist", "follower of Druidism", "Scientologist", "methodist", "agnostic", "spiritualist", "oddball faith", "nihilist"];
+    const immediate_goals = ["deal with enemies at work", "settle with a blackmailer", "resolve a family dispute", "resolve a religious matter", "get help with a medical condition", "find lost property", "pay a debt", "break a bad habit", "secure temporary housing"];
+    const long_goals = [
+      "00", "Protect a loved one who is somehow imperiled", "Secure a valuable artifact", "Gain recognition in their field",
+      "Establish a safe home", "Build a reputation", "Destroy a rival", "Find a lost relative", "Learn a forbidden skill",
+      "Exact revenge on an enemy", "Clear their name", "Join an influential institution", "Avenging a grievous wrong to them or a loved one",
+      "Retire comfortably", "Become wealthy", "Master a craft", "Reconcile with the past", "Expose a conspiracy",
+      "Uncover ancient knowledge", "Win back lost love", "Rebuild a broken organisation", "Change the system"
+    ];
+
+    // Fixer-related arrays (contextual sidebar in original script)
+    const fixer_face = ["are a new face with little history", "have handled business matters quietly in the past", "have been around for a long while", "have been a face here for ages"];
+    const fixer_origins = [
+      "a street-dweller who made good over time",
+      "a corporate sales rep who moved into private contracting",
+      "a retired officer who now uses old connections",
+      "a fixer from the old neighbourhood",
+      "info broker associated with computer hackers",
+      "activist with ties to rebels / terrorists"
+    ];
+    const fixer_clients = [
+      "corporate clients working against rivals",
+      "gangs looking to outsource problems to solve",
+      "operators who need their own work done",
+      "co-ethnics or co-religionists with issues to sort out",
+      "foreign agents of outside powers",
+      "local government agencies needing 'deniables'"
+    ];
+    const fixer_benefits = [
+      "they pay noticably better than most",
+      "they give excellent mid-level jobs carefully",
+      "they can get plum jobs for favoured operators",
+      "they match jobs to operators very well",
+      "they find work for newbies",
+      "they can get operator gear at discount rates",
+      "their jobs are usually exactly what they say they will be",
+      "they cultivate long-term partnerships"
+    ];
+    const fixer_rumours = [
+      "they burnt a team for a former client",
+      "they take on bad clients sometimes",
+      "some missions go wildly out of control",
+      "they skim the mission payoff",
+      "some info that comes from them can be dangerously incorrect",
+      "they burn teams that disappoint them",
+      "they hate particular types of people",
+      "they don't always give the whole story about the mission",
+      "they are much too optimistic about things",
+      "they often get important details wrong"
+    ];
+
+    function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    function generateNPC() {
+      let out = "The NPC is ";
+      out += pick(heights) + " and ";
+      out += pick(builds) + ". They are ";
+      out += pick(looks) + " ";
+      out += pick(clothing) + ". ";
+
+      out += "They have " + pick(accessories) + ". ";
+      out += "They have " + pick(cyber) + ". ";
+
+      out += "The NPC is " + pick(personality) + ". ";
+      out += "The NPC " + pick(mannerisms) + ". ";
+
+      out += "They " + pick(roles) + " and ";
+      out += "like " + pick(likes) + ". ";
+
+      // simple dislike logic: pick a dislike different from like when possible
+      let like = pick(likes);
+      let dislike = like;
+      let attempts = 0;
+      while (dislike === like && attempts < 6) { dislike = pick(likes); attempts++; }
+      if (dislike === like) { out += "They dislike insects. "; } else { out += "They dislike " + dislike + ". "; }
+
+      out += "They are a " + pick(beliefs) + ". ";
+      out += "Their non-plot-related goal is to " + pick(immediate_goals) + " or " + pick(long_goals) + ". ";
+
+      // Fixer paragraph (optional)
+      out += "\n\nIn the context of a fixer: ";
+      out += pick(fixer_face) + ", ";
+      out += "origin: " + pick(fixer_origins) + ". ";
+      out += "They typically work for " + pick(fixer_clients) + ", and " + pick(fixer_benefits) + ". ";
+      out += "The word on the street is that " + pick(fixer_rumours) + ".";
+
+      return out;
+    }
+
+    const outEl = document.getElementById('out');
+    document.getElementById('gen').addEventListener('click', () => {
+      outEl.textContent = generateNPC();
+    });
+    document.getElementById('copy').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(outEl.textContent);
+        alert('Copied to clipboard');
+      } catch (e) { alert('Copy failed: ' + e); }
+    });
+  </script>
+</body>
+</html>
