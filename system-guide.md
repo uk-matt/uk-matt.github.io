@@ -52,7 +52,7 @@ Modeled on how Earth travel guides break down countries or cities:
 
 ### 5. **Culture & Society**
 
--   **Local Inhabitants**: Physiology, customs, and behavior of native species (if any).
+-   **Local Inhabitants**: Important people and an important organization or agitating unions. Physiology, customs, and behavior of native species (if any).
     
 -   **Food & Drink**: Edible resources, dining etiquette, and warnings about toxic foods.
     
@@ -82,8 +82,9 @@ Modeled on how Earth travel guides break down countries or cities:
     
 -   **Extreme Sports**: Low-gravity gliding, plasma surfing, asteroid racing.
     
--   **Wildlife Encounters**: Safe viewing of alien megafauna, warnings against predatory species.
-    
+-   **Wildlife Encounters**: Safe viewing of alien megafauna, warnings against predatory species. And plants.
+
+    **Adventure hooks**: jobs and things that visitors can do to make money
 
 ----------
 
