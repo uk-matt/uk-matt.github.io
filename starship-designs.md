@@ -1,13 +1,13 @@
 
 
 ## 50t Octagon Cutter ##
-Used by megacorp for a variety of in-system tasks, transporting small loads of cargo, personnel or away teams.
-**Modular cutter**; tonnage 50, TL12, no armour, streamlined
-Manoeuvre 4G, no jump, P-plant rating 4, no fuel
-Model/2 computer, double turret (beam laser and pulse laser)
-Fittings: 30t module
-Crew: 2 total - pilot & gunner
-Cost: MCr 37.15
+Used by megacorp for a variety of in-system tasks, transporting small loads of cargo, personnel or away teams.  
+**Modular cutter**; tonnage 50, TL12, no armour, streamlined  
+Manoeuvre 4G, no jump, P-plant rating 4, no fuel  
+Model/2 computer, double turret (beam laser and pulse laser)  
+Fittings: 30t module  
+Crew: 2 total - pilot & gunner  
+Cost: MCr 37.15  
 
 ## 100t Type-YL Yacht
 Used by executives, politicians and wealthy individuals for leisure and business travel. People who buy refined fuel, they don't skim for it.  
