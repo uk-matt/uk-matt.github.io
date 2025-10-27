@@ -43,7 +43,7 @@ Fittings: 10 staterooms, 4 cryotubes, 4 additional airlocks (including 2 cargo b
 Cost: MCr 65.25
 
 ## 400t Type-R3 Fat Trader  
-Subsidised merchant used by Octagon Corporation for moving large quantities of foods along the profitable trade route between agricultural, non-industrial Price and high population, industrial Jaer. Most profitable with three crew but often has a fourth (sensor op / gunner) or even a fifth (if no individuals able to fill multiple roles are available) and the crew will tolerate double occupancy staterooms. Also, not uncommon for the captain to carry an air/raft if that might help get to meetings with buyers or sellers.
+Subsidised merchant used by Octagon Corporation for moving large quantities of foods along the profitable trade route between agricultural, non-industrial Price and high population, industrial Jaer. Most profitable with three crew but often has a fourth (sensor op / gunner) or even a fifth (if no individuals able to fill multiple roles are available) and the crew will tolerate double occupancy staterooms. Also, not uncommon for the captain to carry an air/raft if that might help get to meetings with buyers or sellers.  
 **Fat Trader**; tonnage 400, TL12, no armour, streamlined  
 Manoeuvre 1G, Jump 3, P-plant rating 3. Fuel 120t  
 Model/3 computer (sensor DM +1 and can operate one turret). Armament: 2 single turrets each with plasma beam  
