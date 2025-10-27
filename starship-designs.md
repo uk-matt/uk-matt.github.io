@@ -34,7 +34,6 @@ Model/1 computer (sensor DM -2), Armament: 2 single turrets (empty when purchase
 Fittings: 4 crew staterooms, 6 high / mid staterooms, 20 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), 90 tons of cargo space  
 Cost: MCr 58.16
 
-
 ## 200t Type-A2 Far Trader  
 Used by merchants needing to cover distances of up to two parsecs between destinations  
 **Far Trader**; tonnage 200; TL11; No armour; streamlined  
@@ -42,6 +41,14 @@ Manoeuvre 1G; Jump 2; P-plant rating 2; Fuel 44 tons
 Model/1adv computer (sensor DM -2), Armament: 2 single turrets each with pulse laser  
 Fittings: 10 staterooms, 4 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), Air/raft; 66 tons of cargo space & 1t mail vault  
 Cost: MCr 65.25
+
+## 400t Type-R3 Fat Trader  
+Subsidised merchant used by Octagon Corporation for moving large quantities of foods along the profitable trade route between agricultural, non-industrial Price and high population, industrial Jaer. Most profitable with three crew but often has a fourth (sensor op / gunner) or even a fifth (if no individuals able to fill multiple roles are available) and the crew will tolerate double occupancy staterooms. Also, not uncommon for the captain to carry an air/raft if that might help get to meetings with buyers or sellers.
+**Fat Trader**; tonnage 400, TL12, no armour, streamlined  
+Manoeuvre 1G, Jump 3, P-plant rating 3. Fuel 120t  
+Model/3 computer (sensor DM +1 and can operate one turret). Armament: 2 single turrets each with plasma beam  
+Fittings: 3 crew staterooms, 5 additional airlocks (including 3 cargo bay doors), fuel scoops, fuel processor (60t/day); 66 tons of cargo space  
+Cost: MCr 152.66  
 
 
 These ship designs are compatible with the Cepheus Deluxe rules. Cepheus Deluxe and Stellagama Publishing are the trademarks of Stellagama Publishing and I am not affiliated with Stellagama Publishing  
