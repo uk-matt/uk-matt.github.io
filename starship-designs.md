@@ -47,7 +47,7 @@ Subsidised merchant used by Octagon Corporation for moving large quantities of f
 **Fat Trader**; tonnage 400, TL12, no armour, streamlined  
 Manoeuvre 1G, Jump 3, P-plant rating 3. Fuel 120t  
 Model/3 computer (sensor DM +1 and can operate one turret). Armament: 2 single turrets each with plasma beam  
-Fittings: 3 crew staterooms, 5 additional airlocks (including 3 cargo bay doors), fuel scoops, fuel processor (60t/day); 66 tons of cargo space  
+Fittings: 3 crew staterooms, 5 additional airlocks (including 3 cargo bay doors), fuel scoops, fuel processor (60t/day); 188 tons of cargo space  
 Cost: MCr 152.66  
 
 
