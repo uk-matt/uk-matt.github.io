@@ -48,7 +48,7 @@ Subsidised merchant used by Octagon Corporation for moving large quantities of f
 Manoeuvre 2G, Jump 3, P-plant rating 3. Fuel 120t  
 Model/3 computer (sensor DM +1 and can operate one turret). Armament: 2 single turrets each with plasma beam  
 Fittings: 3 crew staterooms, 5 additional airlocks (including 3 cargo bay doors), fuel scoops, fuel processor (60t/day); 188 tons of cargo space  
-Cost: MCr 138.5  
+Cost: MCr 134.9  
 
 
 These ship designs are compatible with the Cepheus Deluxe rules. Cepheus Deluxe and Stellagama Publishing are the trademarks of Stellagama Publishing and I am not affiliated with Stellagama Publishing  
