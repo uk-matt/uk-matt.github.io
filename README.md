@@ -8,3 +8,10 @@ all of the below is under development, and frankly nothing here is anywhere near
 [npc outlines](https://uk-matt.github.io/npc-v0-1.html) version 0.1
 
 [taking off and landing](https://uk-matt.github.io/toal.html) version 0.1
+
+
+## Useful pages not by me  
+
+[Places To See](https://taunoyen.com/traveller/placestosee.html) and [Next Ship To](https://www.taunoyen.com/traveller/nextshipto.html) by David Burden   
+
+
