@@ -23,8 +23,18 @@ Used by senior mega-corp teams, ultra-wealthy families, crime syndicates
 **Yacht**; tonnage 200; TL11; light crystal-iron armour; standard  
 Manoeuvre 1G; Jump 1; P-plant rating 1; Fuel 40 tons (can make two successive 1 parsec jumps)  
 Model/1 computer (sensor DM -2), Armament: 2 double turrets each with a beam laser and a pulse laser  
-Fittings: 4 crew staterooms, 10 high / mid staterooms, 4 additional airlocks (including crew entrance and vehicle bay doors), 30t ships boat, exploration vehicle (ATV), air/raft, 5 tons of cargo space  
+Fittings: 10 high / mid staterooms, 4 crew staterooms (double occupancy), 4 additional airlocks (including crew entrance and vehicle bay doors), 30t ships boat, exploration vehicle (ATV), air/raft, 5 tons of cargo space  
+Crew: 8 total - Pilot, engineer, 2x gunner, steward, medic, chef, security officer / bodyguard    
 Cost: MCr 79.19
+
+## 200t System Defence Boat ##
+Used for customs patrols, suppression of pirates and to detect and counter random ne'er-do-wells  
+**SDB**; tonnage 200, TL11, heavy crystaliron armour; streamlined  
+Manoeuvre 6G, Jump 0, P-plant rating 6; Fuel 0 tons (no jump drive)  
+Model/3 computer (sensor DM +1). Armament 2 triple turrets each with 3x beam lasers  
+Fittings: 16 crew staterooms, 16x escape pods, armoury, breaching tube, 2x airlocks, repair drones, galley, ships locker, medbay and medlab, 8 tons of cargo space  
+Crew: 16 total - captain, 4x pilots, 4x sensor ops, 4x gunners, 2x engineers, medic, 10x marines    
+Cost: MCr 154.46   
 
 ## 200t Type-A Free Trader
 Used by independent merchants and family haulage businesses along the mains of the Far Frontiers  
@@ -32,6 +42,7 @@ Used by independent merchants and family haulage businesses along the mains of t
 Manoeuvre 1G; Jump 1; P-plant rating 1; Fuel 22 tons  
 Model/1 computer (sensor DM -2), Armament: 2 single turrets (empty when purchased)  
 Fittings: 4 crew staterooms, 6 high / mid staterooms, 20 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), 90 tons of cargo space  
+Crew: 4 - pilot, sensor op / purser, engineer, steward     
 Cost: MCr 58.16
 
 ## 200t Type-A2 Far Trader  
@@ -40,6 +51,7 @@ Used by merchants needing to cover distances of up to two parsecs between destin
 Manoeuvre 1G; Jump 2; P-plant rating 2; Fuel 44 tons  
 Model/1adv computer (sensor DM -2), Armament: 2 single turrets each with pulse laser  
 Fittings: 10 staterooms, 4 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), Air/raft; 66 tons of cargo space & 1t mail vault  
+Crew: pilot, sensor op / purser, engineer, steward    
 Cost: MCr 65.25
 
 ## 400t Type-R3 Fat Trader  
@@ -48,6 +60,7 @@ Subsidised merchant used by Octagon Corporation for moving large quantities of f
 Manoeuvre 2G, Jump 3, P-plant rating 3. Fuel 120t  
 Model/3 computer (sensor DM +1 and can operate one turret). Armament: 2 single turrets each with plasma beam  
 Fittings: 3 crew staterooms, 5 additional airlocks (including 3 cargo bay doors), fuel scoops, fuel processor (60t/day); 187 tons of cargo space  
+Crew: pilot / sensor op, gunner / medic, gunner / engineer  
 Cost: MCr 134.9  
 
 
