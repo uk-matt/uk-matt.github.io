@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>2D6 Sci-fi RPG, UPP Generator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 2rem; background:#f7f7fb; color:#111; }
+    .card { background: white; border-radius: 12px; padding: 1.25rem; box-shadow: 0 6px 20px rgba(20,20,40,0.06); max-width:720px; margin:auto; }
+    h1 { margin: 0 0 0.5rem 0; font-size: 1.25rem; }
+    button { background:#2b6cb0; color:white; border:0; padding:0.6rem 1rem; border-radius:8px; font-weight:600; cursor:pointer; }
+    pre { background:#0f1724; color:#dbeafe; padding:0.75rem; border-radius:8px; overflow:auto; }
+    .muted{ color:#6b7280; font-size:0.95rem; margin-top:0.4rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>2D6 Sci-fi RPG — UPP & Homeworld Generator</h1>
+    <p class="muted">Click the button to generate a UPP (6-digit hex), a homeworld, and the character's skills. Output is printed on one line. Coded by ChatGPT</p>
+
+    <div style="margin-top:1rem;">
+      <button id="gen">Generate UPP</button>
+    </div>
+
+    <div style="margin-top:1rem;">
+      <pre id="output">Press "Generate UPP" to create a character.</pre>
+    </div>
+  </div>
+
+  <script>
+    // --- Helper functions ---
+    function roll2d6(){ return Math.floor(Math.random()*6)+1 + Math.floor(Math.random()*6)+1; } // 2..12
+
+    function clampStat(n){
+      if (n < 2) return 2;
+      if (n > 12) return 12;
+      return n;
+    }
+    function toHexDigit(n){
+      // n is between 2 and 12 inclusive
+      if (n === 10) return 'A';
+      if (n === 11) return 'B';
+      if (n === 12) return 'C';
+      return String(n);
+    }
+
+    // --- Tables (as per user-provided tables) ---
+    // Physical 2D6 -> three-digit string (strength,dexterity,endurance)
+    const physicalMap = {
+      2: '333',
+      3: '444',
+      4: '555',
+      5: '676',
+      6: '767',
+      7: '777',
+      8: '787',
+      9: '878',
+      10:'987',
+      11:'989',
+      12:'999'
+    };
+
+    // Mental: mapping. (User listed keys 1..12 but 2D6 gives 2..12; we'll interpret the table starting at 2)
+    // Using the sequence they gave but mapped to 2..12.
+    const mentalMap = {
+      2: '44',  // (user listed 1=44 -> use for 2)
+      3: '45',
+      4: '54',
+      5: '55',
+      6: '66',
+      7: '76',
+      8: '77',
+      9: '78',
+      10:'87',
+      11:'88',
+      12:'98' // user listed 12=99 but sequence in original had 11=98,12=99; however to keep monotonic we map 12->99? 
+      // NOTE: User's mental table in the prompt had 11=98,12=99. However above we used 11->88 and 12->98 per the posted sequence shifting.
+      // To reconcile with the user's exact textual table (which likely intended 2..12), we will instead override so the final entries match the user's list:
+    };
+
+    // The user's mental table originally (as written) was:
+    // 1=44,2=45,3=54,4=55,5=66,6=76,7=77,8=78,9=87,10=88,11=98,12=99
+    // To best match the user's intended mapping for 2..12, we set the entries accordingly:
+    mentalMap[2] = '45';
+    mentalMap[3] = '54';
+    mentalMap[4] = '55';
+    mentalMap[5] = '66';
+    mentalMap[6] = '76';
+    mentalMap[7] = '77';
+    mentalMap[8] = '78';
+    mentalMap[9] = '87';
+    mentalMap[10]= '88';
+    mentalMap[11]= '98';
+    mentalMap[12]= '99';
+    // To cover low roll 2, we will pick mentalMap[2] = '45' (matching the user's sequence shifted),
+    // which means the very lowest mental result will be '45' (intelligence=4, education=5).
+
+    // Social: mapping (user had 1..12, but 2D6 -> 2..12). We'll use 2..12 values from that listing:
+    const socialMap = {
+      2: '4',
+      3: '5',
+      4: '5',
+      5: '6',
+      6: '6',
+      7: '7',
+      8: '7',
+      9: '8',
+      10:'8',
+      11:'8',
+      12:'9'
+    };
+
+    // Homeworld table: 2..12
+    const homeworldMap = {
+      2: { name:'TBC', type:'Space habitat' },
+      3: { name:'Price', type:'Fringe' },
+      4: { name:'Jenai', type:'Low Tech' },
+      5: { name:'Alzenei', type:'Developed' },
+      6: { name:'Jaer', type:'Metropolis' },
+      7: { name:'Gniadek', type:'Metropolis' },
+      8: { name:'Nesbitt', type:'Fringe' },
+      9: { name:'Kokkelen', type:'Developed' },
+      10:{ name:'Nomael', type:'Developed' },
+      11:{ name:'Shattur', type:'Fringe' },
+      12:{ name:'TBC', type:'Belter' }
+    };
+
+    // Homeworld stat changes (apply to numeric characteristics)
+    // The mapping refers to categories: Belter, Developed, Fringe, Low Tech, Metropolis, Space habitat.
+    function applyHomeworldChanges(hwType, stats){
+      // stats: { str, dex, end, int, edu, soc } numeric (not hex)
+      switch(hwType){
+        case 'Belter':
+          stats.dex += 1;
+          stats.str -= 1;
+          stats.edu -= 1;
+          break;
+        case 'Developed':
+          stats.edu += 1;
+          break;
+        case 'Fringe':
+          stats.dex += 1;
+          stats.soc -= 2;
+          stats.edu -= 2;
+          break;
+        case 'Low Tech':
+          stats.end += 2;
+          stats.edu -= 3;
+          break;
+        case 'Metropolis':
+          stats.edu += 2;
+          stats.str -= 1;
+          stats.end -= 1;
+          break;
+        case 'Space habitat':
+          stats.dex += 1;
+          stats.edu += 1;
+          stats.end -= 1;
+          break;
+        default:
+          break;
+      }
+      // clamp all between 2 and 12
+      for (let k of ['str','dex','end','int','edu','soc']){
+        stats[k] = clampStat(Math.round(stats[k])); // round then clamp
+      }
+      return stats;
+    }
+
+    // Skills by homeworld category
+    const hwSkills = {
+      'Belter': ['Jack-of-all-Trades-1', 'Zero-G-1'],
+      'Developed': ['Admin-1', 'Computer-1'],
+      'Fringe': ['Recon-1', 'Streetwise-1'],
+      'Low Tech': ['Animals-1','Survival-1'],
+      'Metropolis': ['Carousing-1','Liaison-1'],
+      'Space habitat': ['Engineering-1','Zero-G-1']
+    };
+
+    // Extra skills table for two random die results (1..6)
+    const extraSkillMap = {
+      1: 'Drive vehicle-1',
+      2: 'Melee combat-1',
+      3: 'Gun combat-1',
+      4: 'Athletics-1',
+      5: 'Medical-1',
+      6: 'Tactics-1'
+    };
+
+    // Utility: roll one d6
+    function roll1d6(){ return Math.floor(Math.random()*6)+1; }
+
+    // Main generate function
+    function generateCharacter(){
+      // 1) Physical (2D6)
+      const physRoll = roll2d6();
+      const physStr = physicalMap[physRoll] || '777'; // fallback '777' if missing
+      // physStr is 3 chars: strength,dexterity,endurance
+      let str = parseInt(physStr[0],10);
+      let dex = parseInt(physStr[1],10);
+      let end = parseInt(physStr[2],10);
+
+      // 2) Mental (2D6)
+      const mentalRoll = roll2d6();
+      const mentalStr = mentalMap[mentalRoll] || '77'; // fallback
+      let intl = parseInt(mentalStr[0],10);
+      let edu = parseInt(mentalStr[1],10);
+
+      // 3) Social (2D6)
+      const socialRoll = roll2d6();
+      let soc = parseInt(socialMap[socialRoll] || '7',10);
+
+      // 4) Homeworld (2D6)
+      const hwRoll = roll2d6();
+      const hw = homeworldMap[hwRoll] || {name:'Unknown', type:'Unknown'};
+
+      // 5) Apply homeworld stat changes
+      let stats = { str, dex, end, int: intl, edu, soc };
+      stats = applyHomeworldChanges(hw.type, stats);
+
+      // 6) Convert stats to hex digits (2..12 => 2..C)
+      const hexStr = toHexDigit(stats.str);
+      const hexDex = toHexDigit(stats.dex);
+      const hexEnd = toHexDigit(stats.end);
+      const hexInt = toHexDigit(stats.int);
+      const hexEdu = toHexDigit(stats.edu);
+      const hexSoc = toHexDigit(stats.soc);
+
+      const upp = `${hexStr}${hexDex}${hexEnd}${hexInt}${hexEdu}${hexSoc}`;
+
+      // 7) Skills: homeworld gives two skills (from type); plus two random (1d6 each)
+      const baseSkills = hwSkills[hw.type] ? [...hwSkills[hw.type]] : [];
+      // get two extra random skills via 1d6 each -- duplicates ignored
+      const extraSkills = [];
+      for (let i=0;i<2;i++){
+        const r = roll1d6();
+        const s = extraSkillMap[r];
+        if (s && !baseSkills.includes(s) && !extraSkills.includes(s)){
+          extraSkills.push(s);
+        } else {
+          // if duplicate, we still attempt to add up to 2 unique extras;
+          // try up to 5 times to find a non-duplicate
+          let attempts = 0;
+          while((baseSkills.includes(s) || extraSkills.includes(s)) && attempts < 5){
+            const r2 = roll1d6();
+            attempts++;
+            const s2 = extraSkillMap[r2];
+            if (!baseSkills.includes(s2) && !extraSkills.includes(s2)){
+              extraSkills.push(s2);
+              break;
+            }
+          }
+        }
+      }
+      // final skill list: combine and deduplicate preserving order
+      const skillSet = [...baseSkills];
+      for (const s of extraSkills){ if (!skillSet.includes(s)) skillSet.push(s); }
+
+      // 8) Output: UPP, Homeworld and skills - all on one line
+      const oneLine = `${upp} — ${hw.name} (${hw.type}) — Skills: ${skillSet.join(', ')}`;
+
+      return oneLine;
+    }
+
+    // Hook button
+    document.getElementById('gen').addEventListener('click', function(){
+      const out = generateCharacter();
+      document.getElementById('output').textContent = out;
+    });
+
+  </script>
+</body>
+</html>
