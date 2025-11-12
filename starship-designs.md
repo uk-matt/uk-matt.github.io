@@ -66,7 +66,7 @@ Cost: MCr 134.9
 ## 2500t Kraken-class Merchant Cruiser  
 Used for taking big cargoes to dangerous places  
 **Merchant Cruiser**; tonnage 2500, TL12, Crystaliron armour (treat as heavy), streamlined  
-Manouevre 2G, Jump 2, P-plant rating 2, fuel ???t, fuel scoops and fuel processor (175t/day)  
+Manouevre 2G, Jump 2, P-plant rating 2, fuel 500t, fuel scoops and fuel processor (175t/day)  
 Model/4 computer (sensor DM+2), armament: 10x dual turrets (each with plasma beam and pulse laser), 1x fusion gun (bay)  
 Fittings: 32 staterooms, 5x additional airlocks, galley, medbay, ships locker, repair drones, armoury, 20t launch  
 Crew: captain, pilot, sensor op, 6x engineers, 12x gunners, medic, 10x marines  
