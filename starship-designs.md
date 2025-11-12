@@ -63,6 +63,15 @@ Fittings: 3 crew staterooms, 5 additional airlocks (including 3 cargo bay doors)
 Crew: pilot / sensor op, gunner / medic, gunner / engineer  
 Cost: MCr 134.9  
 
+## 2500t Kraken-class Merchant Cruiser  
+Used for taking big cargoes to dangerous places  
+**Merchant Cruiser**; tonnage 2500, TL12, Crystaliron armour (treat as heavy), streamlined  
+Manouevre 2G, Jump 2, P-plant rating 2, fuel ???t, fuel scoops and fuel processor (175t/day)  
+Model/4 computer (sensor DM+2), armament: 10x dual turrets (each with plasma beam and pulse laser), 1x fusion gun (bay)  
+Fittings: 32 staterooms, 5x additional airlocks, galley, medbay, ships locker, repair drones, armoury, 20t launch  
+Crew: captain, pilot, sensor op, 6x engineers, 12x gunners, medic, 10x marines  
+Cost: MCr1084.35  
+
 
 These ship designs are compatible with the Cepheus Deluxe rules. Cepheus Deluxe and Stellagama Publishing are the trademarks of Stellagama Publishing and I am not affiliated with Stellagama Publishing  
 > Written with [StackEdit](https://stackedit.io/).
