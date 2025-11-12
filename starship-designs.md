@@ -1,4 +1,4 @@
-
+# Cepheus ship designs  
 
 ## 50t Octagon Cutter ##
 Used by megacorp for a variety of in-system tasks, transporting small loads of cargo, personnel or away teams.  
