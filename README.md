@@ -8,6 +8,9 @@
 ## Stuff for which I am to blame
 all of my stuff is under development, and frankly not that useful. maybe check back in a few months (or years) if you are really curious. But frankly, a much better use of your time would be to look elsewhere
 
+### Locations  
+[TL-6 Shopping Mall](https://uk-matt.github.io/shopping_mall_TL6.html) version 0.1
+
 ### Non-player characters  
 [UPP generator](https://uk-matt.github.io/UPP-generator.html) version 0.1  
 [npc outlines](https://uk-matt.github.io/npc-v0-1.html) version 0.1  
