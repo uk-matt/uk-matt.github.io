@@ -39,18 +39,18 @@ Cost: MCr 154.46
 ## 200t Type-A Free Trader
 Used by independent merchants and family haulage businesses along the mains of the Far Frontiers  
 **Free Trader**; tonnage 200; TL10; no armour; streamlined  
-Manoeuvre 1G; Jump 1; P-plant rating 1; Fuel 22 tons  
+Manoeuvre 1G; Jump 1; P-plant rating 1; Fuel 20 tons  
 Model/1 computer (sensor DM -2), Armament: 2 single turrets (empty when purchased)  
-Fittings: 4 crew staterooms, 6 high / mid staterooms, 20 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), 90 tons of cargo space  
+Fittings: 4 crew staterooms, 6 high / mid staterooms, 20 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), 92 tons of cargo space  
 Crew: 4 - pilot, sensor op / purser, engineer, steward     
 Cost: MCr 58.16
 
 ## 200t Type-A2 Far Trader  
 Used by merchants needing to cover distances of up to two parsecs between destinations  
 **Far Trader**; tonnage 200; TL11; No armour; streamlined  
-Manoeuvre 1G; Jump 2; P-plant rating 2; Fuel 44 tons  
+Manoeuvre 1G; Jump 2; P-plant rating 2; Fuel 40 tons  
 Model/1adv computer (sensor DM -2), Armament: 2 single turrets each with pulse laser  
-Fittings: 10 staterooms, 4 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), Air/raft; 66 tons of cargo space & 1t mail vault  
+Fittings: 10 staterooms, 4 cryotubes, 4 additional airlocks (including 2 cargo bay doors), fuel scoops, fuel processor (20t/day), Air/raft; 70 tons of cargo space & 1t mail vault  
 Crew: pilot, sensor op / purser, engineer, steward    
 Cost: MCr 65.25
 
