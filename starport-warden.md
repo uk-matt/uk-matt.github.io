@@ -85,5 +85,5 @@ Represent a person or organisation which will probably have an effect on the sta
 * Ace - The monorail is coming! Make a streetwise skill check. If successful a monorail connection is built between the starport and the nearest city. Traffic increases by five times the effect of the roll. If the roll is failed, the connectivity improvement was a con. Reduce reputation by 3 points.
 
 ## The end
-Written by Eventvwr, with thanks to Marc Miller and all the other authors of 2D6 sci-fi games. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+Written by Matt, with thanks to Marc Miller and all the other authors of 2D6 sci-fi games. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
 [Home page](https://uk-matt.github.io/)
