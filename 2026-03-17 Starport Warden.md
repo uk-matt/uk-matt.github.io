@@ -86,3 +86,4 @@ Represent a person or organisation which will probably have an effect on the sta
 
 ## The end
 Written by Eventvwr, with thanks to Marc Miller and all the other authors of 2D6 sci-fi games. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[Home page](https://uk-matt.github.io/)
