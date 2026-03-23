@@ -1,7 +1,7 @@
 # Starport Warden
 ## Introduction
 A solo game about managing a small, out of the way starport. Perhaps you can grow it into a big starport before you retire?
-The game requires a standard deck of playing cards. You will draw one card each year of game time, to represent how business goes that year. Every ten years you will see if the starport has grown or shrunk. After fifty years (or earlier if you get to Class A status) you will retire. This is version 0.1 (March 2026)
+The game requires a standard deck of playing cards, two six-sided dice and a way to record the events - paper, pencil, spreadsheet? You will draw one card each year of game time, to represent how business goes that year. Every ten years you will see if the starport has grown or shrunk. After fifty years (or earlier if you get to Class A status) you will retire. This is version 0.1 (March 2026)
 
 ## Skills
 You have six skill points to divide between these five skills:
