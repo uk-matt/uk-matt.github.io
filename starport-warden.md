@@ -15,27 +15,33 @@ You have six skill points to divide between these five skills:
 ### Facilities
 #### Class X starport
 This starport barely exists. It has no facilities  
+
 #### Class E starport
 This starport has a marked out patch of flat land  
+
 #### Class D starport
 This starport has everything a class E starport has, plus:  
 * First aid station
-* Fuel tank – unrefined    
+* Fuel tank – unrefined
+
 #### Class C starport
 This starport has everything a class D starport has, plus:  
 * Repair facilities – basic
 * Medical facility with nurse
-* Life support restocking  
+* Life support restocking
+
 #### Class B starport  
 This starport has everything a class C starport has, plus:  
 * Shipyard – spaceship construction
 * Fuel tank – refined
-* Medical facility with doctor  
+* Medical facility with doctor
+
 #### Class A starport  
 This starport has everything a class B starport has, plus:  
 * Repair facilities – refitting & annual maintenance
 * Refitting facilities – jump drives
 * Shipyard – starship construction  
+
 
 ### Reputation
 The starport is the front door of the system. If it is well run and stable, it is likely to be well used and grow quickly. If things often go wrong, it will be harder to get business.
