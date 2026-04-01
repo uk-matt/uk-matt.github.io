@@ -47,8 +47,8 @@ A measure of how many starships are using the starport. More visitors means more
 
 Each year, draw a card to simulate the main event affecting the starport. Often a face card will result in a skill check. The "effect" of the roll is the difference between the number needed to succeed (which is 8) and the number rolled. As an example, if eleven was rolled for a skill check the effect would be 3 (11-8)
 AFter ten cards have been drawn, review a decade of activity. 
-* If traffic is 20 or more, there are sufficient funds for the starport to construct a new facility, choose one from the list above that is needed to bring the starport to the next category; and
-* If reputation is 10 or more, add a point to one of your skills.
+* If traffic is 20 or more, there are sufficient funds for the starport to construct a new facility, choose one from the list above that is needed to bring the starport to the next category and record it has been built, then reduce traffic by 20 and roll the remainder over into the next decade; and
+* If reputation is 10 or more, add a point to one of your skills and reduce reputation by 10, then roll the remainder over into the next decade.
 
 ### Number cards
 Represent 
@@ -69,7 +69,7 @@ Represent a person or organisation which will probably have an effect on the sta
 #### Diamonds
 * Jack - The leader of the local merchant's trade association contacts the starport to arrange better terms for members. Make a liaison skill check. If passed the mutually beneficial agreement increases traffic by double the effect of the roll. If failed the merchants complain about unfair treatment and reputation is decreased by two.
 * Queen - A megacorporation executive is considering opening a new trade route. Make an admin roll to see if this comes off. Traffic increases by five times the effect of the roll
-* King - The admiral of the Navy considers anti-piracy exercises in the subsector. Make a carousing skill check. If passed the Navy will make frequent patrols and merchants are more likely to come to this system - increase traffoc and reputation by double the effect of the roll.
+* King - The admiral of the Navy considers anti-piracy exercises in the subsector. Make a carousing skill check. If passed the Navy will make frequent patrols and merchants are more likely to come to this system - increase traffic and reputation by double the effect of the roll.
 * Ace - A megacorporation opens a local office on the mainworld. Make a liaison roll to see what the effect on the starport is. If failed, traffic and reputation both increase by 1. If passed, points equal to five time the effect of the roll can be spilt between traffic and reputation
 
 #### Hearts
