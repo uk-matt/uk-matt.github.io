@@ -20,7 +20,7 @@ This starport has a marked out patch of flat land
 #### Class D starport
 This starport has everything a class E starport has, plus:  
 * First aid station
-* Fuel tank – unrefined  
+* Fuel tank – unrefined    
 #### Class C starport
 This starport has everything a class D starport has, plus:  
 * Repair facilities – basic
