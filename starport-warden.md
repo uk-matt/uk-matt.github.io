@@ -1,7 +1,7 @@
 # Starport Warden
 ## Introduction
 A solo game about managing a small, out of the way starport. Perhaps you can grow it into a big starport before you retire?
-The game requires a standard deck of playing cards, two six-sided dice and a way to record the events - paper, pencil, spreadsheet? You will draw one card each year of game time, to represent how business goes that year. Every ten years you will see if the starport has grown or shrunk. After fifty years (or earlier if you get to Class A status) you will retire. This is version 0.1 (March 2026)
+The game requires a standard deck of playing cards, two six-sided dice and a way to record the events - paper, pencil, spreadsheet? You will draw one card each year of game time, to represent how business goes that year. Every ten years you will see if the starport has grown or shrunk. After fifty years (or earlier if you get to Class A status) you will retire.
 
 ## Skills
 You have six skill points to divide between these five skills:
@@ -52,9 +52,10 @@ A measure of how many starships are using the starport. More visitors means more
 ## Gameplay
 
 Each year, draw a card to simulate the main event affecting the starport. Often a face card will result in a skill check. The "effect" of the roll is the difference between the number needed to succeed (which is 8) and the number rolled. As an example, if eleven was rolled for a skill check the effect would be 3 (11-8)
-AFter ten cards have been drawn, review a decade of activity. 
+After ten cards have been drawn, review a decade of activity.
 * If traffic is 20 or more, there are sufficient funds for the starport to construct a new facility, choose one from the list above that is needed to bring the starport to the next category and record it has been built, then reduce traffic by 20 and roll the remainder over into the next decade; and
 * If reputation is 10 or more, add a point to one of your skills and reduce reputation by 10, then roll the remainder over into the next decade.
+Shuffle the deck and repeat, until five decades have passed.
 
 ### Number cards
 Represent 
@@ -91,5 +92,5 @@ Represent a person or organisation which will probably have an effect on the sta
 * Ace - The monorail is coming! Make a streetwise skill check. If successful a monorail connection is built between the starport and the nearest city. Traffic increases by five times the effect of the roll. If the roll is failed, the connectivity improvement was a con. Reduce reputation by 3 points.
 
 ## The end
-Written by Matt, with thanks to Marc Miller and all the other authors of 2D6 sci-fi games. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
+This is version 0.2 (April 2026). Written by Matt, with thanks to Marc Miller and all the other authors of 2D6 sci-fi games. [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)   
 [Home page](https://uk-matt.github.io/)
