@@ -79,7 +79,7 @@ Represent a person or organisation which will probably have an effect on the sta
 * Ace - A megacorporation opens a local office on the mainworld. Make a liaison roll to see what the effect on the starport is. If failed, traffic and reputation both increase by 1. If passed, points equal to five time the effect of the roll can be spilt between traffic and reputation
 
 #### Hearts
-* Jack - Official from the Scouts service visits the starport to research a location for an exploration base. Make a successful Tactics skill check to convince the scout of the benefit to locating the base in this system. If successful the repyutraion of the starport will increase by 4 points.
+* Jack - Official from the Scouts service visits the starport to research a location for an exploration base. Make a successful Tactics skill check to convince the scout of the benefit to locating the base in this system. If successful the reputation of the starport will increase by 4 points.
 * Queen - A doctor arrives in system and wants to set up, or upgrade a medical facility. Succeed with a liaison skill check to have them do this at the starport - the medical facility will be upgraded to the next level
 * King - A noble considers investing in the starport. Make a carousing skill check to see if they will finance one of the upgrades needed to bring the starport up to the next class
 * Ace - A colony ship with large number of settlers arrives. Make an admin skill check to see if they settle on the mainworld. Traffic increases by five times the effect of the roll
