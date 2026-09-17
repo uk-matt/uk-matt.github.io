@@ -18,6 +18,15 @@ Fittings: 6 passenger staterooms; 3 crew staterooms (double occupancy); 4 escape
 Crew: 6 total - Pilot, engineer, steward, medic, chef, bodyguard  
 Cost: MCr 40.23  
 
+## 100t Type-JB Prospector  
+Used by small asteroid mining operators.  
+**Prospector**; tonnage 100, TL11, no armour, streamlined  
+Manoeuvre 2G; Jump 2; P-plant rating 2; Fuel 20 tons  
+Model/2 computer (sensor DM +0), armament: double turret with beam laser and mining laser  
+Fittings: 2 crew staterooms, 2 escape pods, fuel scoops, 5x probe drones, 10t mining equipment, 10t Gig, 23t cargo space  
+Crew: 2 total - pilot / sensor op, engineer / gunner  
+Cost: MCr 38.53  
+
 ## 200t Type-Y Yacht
 Used by senior mega-corp teams, ultra-wealthy families, crime syndicates  
 **Yacht**; tonnage 200; TL11; light crystal-iron armour; standard  
@@ -55,7 +64,7 @@ Crew: pilot, sensor op / purser, engineer, steward
 Cost: MCr 65.25
 
 ## 400t Type-R3 Fat Trader  
-Subsidised merchant used by Octagon Corporation for moving large quantities of foods along the profitable trade route between agricultural, non-industrial Price and high population, industrial Jaer. Most profitable with three crew but often has a fourth (sensor op / gunner) or even a fifth (if no individuals able to fill multiple roles are available) and the crew will tolerate double occupancy staterooms. Also, not uncommon for the captain to carry an air/raft if that might help get to meetings with buyers or sellers.  
+Subsidised merchant used by Octagon Corporation for moving large quantities of foods along the profitable trade route between agricultural, non-industrial Price and high population, industrial Jaer. Most profitable with three crew but often has a fourth (sensor op / gunner) or even a fifth (if no individuals able to fill multiple roles are available and the crew will tolerate double occupancy staterooms). Also, not uncommon for the captain to carry an air/raft if that might help get to meetings with buyers or sellers.  
 **Fat Trader**; tonnage 400, TL12, no armour, streamlined  
 Manoeuvre 2G, Jump 3, P-plant rating 3. Fuel 120t  
 Model/3 computer (sensor DM +1 and can operate one turret). Armament: 2 single turrets each with plasma beam  
